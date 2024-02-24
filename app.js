@@ -2,12 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const translate = require('translate-google');
 const app = express();
-const port = 3000; // Choose any port you prefer
+const port = 3000; 
 
 app.use(bodyParser.json());
 
 app.post('/translate', (req, res) => {
-  // Check if request has JSON data
+  
   if (!req.is('application/json')) {
     return res.status(400).json({ error: "Invalid request format. Use JSON data." });
   }
